@@ -35,15 +35,7 @@ class Control {
     }
 
     async add(file) {
-        // const data = await fs.readFile(file, {encoding: 'utf-8'})
-        // const hash = this.hashObject(data)
-        // console.log(hash);
-        // const objectPath = path.join(this.objectsPath, hash)
-        // await fs.writeFile(objectPath, data)
-        // // TODO: Add file to staging area (INDEX)
-        // await this.updateStageArea(file, hash)
-        // console.table({hash, file, objectPath})
-        // console.log("===============================")
+ 
 
         const ignoredPatterns = await this.getIgnoredPatterns();
 
@@ -80,33 +72,7 @@ class Control {
     }
 
     async controlcommit(message) {
-        // const index = JSON.parse(await fs.readFile(this.indexPath, {encoding: 'utf-8'}))
-        // const parent = await this.getCurrentHead()
-        // const commintTimestamp = {
-        //     timestamp: new Date().toISOString(),
-        //     message,
-        //     file: index,
-        //     parent: parent || ''
-        // }
-
-        // const commitHash = this.hashObject(JSON.stringify(commintTimestamp))
-        // const commitPath = path.join(this.objectsPath, commitHash)
-        // await fs.writeFile(commitPath, JSON.stringify(commintTimestamp))
-        // await fs.writeFile(this.headerPath, commitHash) // Update HEAD to point to the new commit hash
-        // // Clear the staging area
-        // await fs.writeFile(this.indexPath, JSON.stringify([]))
-
-        // // console.table({
-        // //     commitHash, 
-        // //     commitPath,
-        // //     parent: commintTimestamp.parent, 
-        // //     file: commintTimestamp.file,
-        // //     message: commintTimestamp.message,
-        // //     timestamp: commintTimestamp.timestamp
-        // // })
-        // console.log("===============================")
-        // console.log('Control commit was successful')
-        // console.log("===============================")
+        
 
         const branchesPath = path.join(this.sourcePath, 'BRANCHES');
         const branches = JSON.parse(await fs.readFile(branchesPath, { encoding: 'utf-8' }));
