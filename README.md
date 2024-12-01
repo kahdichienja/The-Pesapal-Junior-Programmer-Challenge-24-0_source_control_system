@@ -2,6 +2,11 @@
 
 This is a lightweight version control system inspired by Git. It allows tracking file changes, creating commits, managing branches, merging changes, and viewing differences between commits or branches.
 
+
+## Getting Started
+For detailed instructions on running this project, check out the [RUN.md](RUN.md) file.
+
+
 ## **Features**
 
 ### **1. Core Features**
