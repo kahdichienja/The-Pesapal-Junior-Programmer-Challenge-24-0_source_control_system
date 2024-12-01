@@ -26,7 +26,7 @@ Initializes the `.control` directory for version control.
 
 **Command:**
 ```bash
-control init
+./index.mjs control init
 ```
 
 **Implementation:**
@@ -44,12 +44,12 @@ Stages a file for the next commit.
 
 **Command:**
 ```bash
-control add <file>
+./index.mjs control add <file>
 ```
 
 **Example:**
 ```bash
-control add file.txt
+./index.mjs control add file.txt
 ```
 
 **Implementation:**
@@ -67,12 +67,12 @@ Creates a new commit with a message.
 
 **Command:**
 ```bash
-control commit <message>
+./index.mjs control commit <message>
 ```
 
 **Example:**
 ```bash
-control commit "Initial commit"
+./index.mjs control commit "Initial commit"
 ```
 
 **Implementation:**
@@ -90,7 +90,7 @@ Displays the commit log from the current branch.
 
 **Command:**
 ```bash
-control log
+./index.mjs control log
 ```
 
 **Implementation:**
@@ -108,12 +108,12 @@ Displays differences between a commit and its parent.
 
 **Command:**
 ```bash
-control diff <hash>
+./index.mjs control diff <hash>
 ```
 
 **Example:**
 ```bash
-control diff abc123
+./index.mjs control diff abc123
 ```
 
 **Implementation:**
@@ -132,12 +132,12 @@ program.command('diff <hash>').action(async (hash) => {
 
   **Command:**
   ```bash
-  control branch <branch>
+  ./index.mjs control branch <branch>
   ```
 
   **Example:**
   ```bash
-  control branch new-feature
+  ./index.mjs control branch new-feature
   ```
 
   **Implementation:**
@@ -153,12 +153,12 @@ program.command('diff <hash>').action(async (hash) => {
 
   **Command:**
   ```bash
-  control checkout <branch>
+  ./index.mjs control checkout <branch>
   ```
 
   **Example:**
   ```bash
-  control checkout main
+  ./index.mjs control checkout main
   ```
 
   **Implementation:**
@@ -176,12 +176,12 @@ Merges a target branch into the current branch.
 
 **Command:**
 ```bash
-control merge <branch>
+./index.mjs control merge <branch>
 ```
 
 **Example:**
 ```bash
-control merge main
+./index.mjs control merge main
 ```
 
 **Implementation:**
@@ -199,12 +199,12 @@ Shows differences between the HEAD commits of two branches.
 
 **Command:**
 ```bash
-control diffbranch <branch1> <branch2>
+./index.mjs control diffbranch <branch1> <branch2>
 ```
 
 **Example:**
 ```bash
-control diffbranch main new-feature
+./index.mjs control diffbranch main new-feature
 ```
 
 **Implementation:**
@@ -222,12 +222,12 @@ Copies an existing repository to a new location on disk.
 
 **Command:**
 ```bash
-control clone <source> <destination>
+./index.mjs control clone <source> <destination>
 ```
 
 **Example:**
 ```bash
-control clone /path/to/source /path/to/destination
+./index.mjs control clone /path/to/source /path/to/destination
 ```
 
 **Implementation:**
@@ -248,7 +248,7 @@ program.command('clone <source> <destination>').action(async (source, destinatio
 2. **Execution**:
    - The CLI is run from the terminal. Example:
      ```bash
-     control init
+     ./index.mjs control init
      ```
    - The appropriate command is matched and executed.
 
